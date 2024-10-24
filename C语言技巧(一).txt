@@ -6,5 +6,5 @@
     #define FALSE 0
 3.标识符要见名知意,但也不能冗长赘余
 4.建议用const定义常量,#define文本替换
-5.switch语句的最后建议加上default
-6.函数在前,main在后
+5.switch语句如果case包含不全,最后建议加上default
+6.其他函数在前,main在后,往往可以便于理解
