@@ -27,15 +27,14 @@ public class Bank {
         Scanner scanner = new Scanner(System.in);
         System.out.println(Strings.name);
         String name = scanner.nextLine();
-        scanner.nextLine();//清除缓冲区
         while (true){
             System.out.println(Strings.password);
             int password = scanner.nextInt();
             System.out.println(Strings.confirm_pwd);
             scanner.nextLine();//清除缓冲区
-            String confirm_pwd = scanner.nextLine();
+            int confirm_pwd = scanner.nextInt();
             /**创建账户并存储到字典accounts中*/
-            if (password == Integer.parseInt(confirm_pwd)) {
+            if (password == confirm_pwd) {
                 System.out.println(Strings.success_register);
                 long ID = generateID();
                 System.out.println(Strings.your_id + ID);
@@ -43,7 +42,6 @@ public class Bank {
                 cust.ID = ID;
                 cust.name = name;
                 Accounts.accounts.put(ID, cust);
-                scanner.close();
                 return cust;
             } 
             /**两次输入密码不一致 */
@@ -60,7 +58,6 @@ public class Bank {
         while (true) {
             System.out.println(Strings.account_id);
             long ID = scanner.nextLong();
-            scanner.nextLine();//清除缓冲区
             Cust cust = Accounts.accounts.get(ID);
             if (cust == null) {
                 System.out.println(Strings.wrong_account);
@@ -68,9 +65,9 @@ public class Bank {
             }
             System.out.println(Strings.password);
             int password = scanner.nextInt();
-            if (cust.password == password) {
+            if (password == cust.password){
                 System.out.println(Strings.success_login);
-                scanner.close();
+                System.out.println(Strings.login_welcome+cust.name+"！");
                 return cust;
             }
             System.out.println(Strings.wrong_pwd);

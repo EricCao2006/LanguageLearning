@@ -27,7 +27,6 @@ public class Cust {
             this.amount += amount;
             System.out.println(Strings.success_deposit);
         }
-        scanner.close();
     }
     
     /**取款,需要输入密码 */
@@ -52,7 +51,6 @@ public class Cust {
         else{
             System.out.println(Strings.wrong_pwd);
         }
-        scanner.close();
     }
     
     /**转账,需要输入密码 */
@@ -88,7 +86,6 @@ public class Cust {
         else{
             System.out.println(Strings.wrong_pwd);
         }
-        scanner.close();
     }    
     
     /**查询余额,需要输入密码 */
@@ -102,7 +99,6 @@ public class Cust {
         else{
             System.out.println(Strings.wrong_pwd);
         }
-        scanner.close();
     }
     
     /**修改密码 */
@@ -122,7 +118,6 @@ public class Cust {
                     if(new_pwd == confirm_pwd){
                         this.password = new_pwd;
                         System.out.println(Strings.change_pwd_success);
-                        scanner.close();
                         break;
                     }
                     /**否则提示错误 */

@@ -10,7 +10,7 @@ public class Strings {
     static String menu_login = 
         "1.登录\n" +
         "2.注册\n" +
-        "3.退出\n";
+        "3.退出";
 
     /** 主菜单 */
     static String menu_main = 
@@ -19,7 +19,7 @@ public class Strings {
         "3.转账\n" +
         "4.查询余额\n" +
         "5.修改密码\n" +
-        "6.返回登录界面\n";
+        "6.返回登录界面";
     
     static String case_inexist = "选项不存在！" ;
     
@@ -31,12 +31,13 @@ public class Strings {
     static String wrong_account = "账号不存在！" ;
     static String wrong_pwd = "密码错误，请重新输入！" ;
     static String success_login = "登录成功！" ;
+    static String login_welcome = "欢迎回来，" ;
 
     /**注册相关 */
     static String name = "请输入用户名：" ;
     static String password = "请输入密码：" ;
     static String confirm_pwd = "请再次输入密码：" ;
-    static String success_register = "注册成功！" ;
+    static String success_register = "注册成功，请登录！" ;
     static String your_id = "您的账号为：" ;
 
     /**修改密码相关 */
